@@ -19,7 +19,7 @@ public class UserService {
     /**
      * User를 id로 조회한다.
      *
-     * @param id
+     * @param id User id
      * @return UserDto
      */
     public UserDto findById(long id) {
