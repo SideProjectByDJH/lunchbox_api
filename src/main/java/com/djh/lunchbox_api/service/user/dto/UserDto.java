@@ -1,13 +1,13 @@
 package com.djh.lunchbox_api.service.user.dto;
 
 import com.djh.lunchbox_api.entity.User;
+import lombok.Builder;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
-@RequiredArgsConstructor
+@Builder
 public class UserDto {
 
     private Long id;
@@ -21,12 +21,12 @@ public class UserDto {
     private boolean enabled;
 
     public static UserDto of(User user) {
-        UserDto userDto = new UserDto();
-        userDto.setId(user.getId());
-        userDto.setEmail(user.getEmail());
-        userDto.setNickname(user.getNickname());
-        userDto.setProfileImageUrl(user.getProfileImageUrl());
-        userDto.setEnabled(user.isEnabled());
-        return userDto;
+        return UserDto.builder()
+                .id(user.getId())
+                .email(user.getEmail())
+                .nickname(user.getNickname())
+                .profileImageUrl(user.getProfileImageUrl())
+                .enabled(user.isEnabled())
+                .build();
     }
 }
