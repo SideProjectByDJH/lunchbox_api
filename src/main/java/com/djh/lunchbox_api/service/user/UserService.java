@@ -33,6 +33,7 @@ public class UserService {
      *
      * @param req UserCreateRequest
      */
+    @Transactional
     public void create(UserCreateRequest req) {
         User user = new User();
         user.setEmail(req.getEmail());
