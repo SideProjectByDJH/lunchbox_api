@@ -12,3 +12,4 @@ spring:
         generate_statistics: false
         format_sql: true
         use_sql_comments: false
+        ddl-auto: create-drop
