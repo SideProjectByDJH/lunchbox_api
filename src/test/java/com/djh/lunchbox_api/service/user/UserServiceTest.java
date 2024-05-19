@@ -61,11 +61,12 @@ class UserServiceTest {
     @Test
     public void testCreate() {
         // given
-        UserCreateRequest req = new UserCreateRequest();
-        req.setEmail("test@mail.com");
-        req.setNickname("test");
-        req.setPassword("test");
-        req.setProfileImageUrl("test");
+        UserCreateRequest req = UserCreateRequest.builder()
+                .nickname("test")
+                .email("test@mail.com")
+                .password("test")
+                .profileImageUrl("test")
+                .build();
         UserService userService = new UserService(userRepository);
 
         // when
