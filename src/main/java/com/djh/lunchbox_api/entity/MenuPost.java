@@ -4,7 +4,7 @@ package com.djh.lunchbox_api.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@Entity
+@Entity(name = "menu_posts")
 @Data
 public class MenuPost {
 

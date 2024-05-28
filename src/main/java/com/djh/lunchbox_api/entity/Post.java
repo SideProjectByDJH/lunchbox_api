@@ -5,7 +5,7 @@ import lombok.Data;
 
 import java.time.ZonedDateTime;
 
-@Entity
+@Entity(name = "posts")
 @Data
 public class Post {
 

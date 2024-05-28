@@ -3,7 +3,7 @@ package com.djh.lunchbox_api.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@Entity
+@Entity(name = "saves")
 @Data
 public class Save {
     @Id
